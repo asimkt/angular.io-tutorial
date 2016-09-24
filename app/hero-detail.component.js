@@ -21,7 +21,6 @@ var HeroDetailComponent = (function () {
         var _this = this;
         this.route.params.forEach(function (params) {
             var id = +params['id'];
-            console.log(params);
             _this.heroService.getHero(id)
                 .then(function (hero) { return _this.hero = hero; });
         });
